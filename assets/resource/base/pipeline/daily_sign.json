@@ -1,0 +1,204 @@
+{
+    "点击宿舍": {
+        "recognition":"TemplateMatch",
+        "template":"宿舍.png",
+        "roi":[864,381,123,54],
+        "action":"Click",
+        "post_wait_freezes": 500,
+        "next":["点击完成事件","点击宿舍商店"]
+    },
+    "点击完成事件": {
+        "recognition":"TemplateMatch",
+        "template":"完成事件.png",
+        "roi":[884,622,89,91],
+        "action":"Click",
+        "post_wait_freezes": 500,
+        "next":["点击任意区域"]
+    },
+    "点击任意区域": {
+        "action":"Click",
+        "post_wait_freezes": 500,
+        "next":["点击宿舍商店"]
+    },
+    "点击宿舍商店": {
+        "recognition":"TemplateMatch",
+        "template":"宿舍商店.png",
+        "roi":[200,645,134,44],
+        "action":"Click",
+        "post_wait_freezes": 500,
+        "next":["购买特惠涂装","点击宿舍商店返回"]
+    },
+    "购买特惠涂装": {
+        "recognition":"OCR",
+        "expected":"推荐",
+        "roi":[275,195,74,26],
+        "action":"Click",
+        "post_wait_freezes": 500,
+        "next":["点击涂装购买"]
+    },
+    "点击涂装购买": {
+        "recognition":"OCR",
+        "expected":"购买",
+        "roi":[720,640,236,55],
+        "action":"Click",
+        "post_wait_freezes": 500,
+        "next":["点击宿舍商店返回"]
+    },
+    "点击宿舍商店返回": {
+        "recognition":"TemplateMatch",
+        "template":"返回.png",
+        "roi":[27,12,107,46],
+        "action":"Click",
+        "post_wait_freezes": 500,
+        "next":["点击委托"]
+    },
+    "点击委托": {
+        "recognition":"TemplateMatch",
+        "template":"委托.png",
+        "roi":[1146,622,91,90],
+        "action":"Click",
+        "post_wait_freezes": 500,
+        "next":["点击派遣"]
+    },
+    "点击派遣": {
+        "recognition":"TemplateMatch",
+        "template":"派遣.png",
+        "roi":[20,592,117,115],
+        "action":"Click",
+        "post_wait_freezes": 2000,
+        "next":["点击委托返回"]
+    },
+    "点击委托返回": {
+        "recognition":"TemplateMatch",
+        "template":"委托返回.png",
+        "roi":[27,11,107,50],
+        "action":"Click",
+        "post_wait_freezes": 500,
+        "next":["点击宿舍返回"]
+    },
+    "点击宿舍返回": {
+        "recognition":"TemplateMatch",
+        "template":"宿舍返回.png",
+        "roi":[28,12,106,47],
+        "action":"Click",
+        "post_wait_freezes": 500,
+        "next":["点击商店"]
+    },
+    "点击商店": {
+    "recognition":"TemplateMatch",
+    "template":"商店.png",
+    "roi":[861,448,81,75],
+    "action":"Click",
+    "post_wait_freezes": 500,
+    "next":["购买碎片","点击商店返回"]
+    },
+    "购买碎片": {
+    "post_wait_freezes": 500,
+    "recognition":"TemplateMatch",
+    "template":"逆元.png",
+    "threshold":0.95,
+    "roi":[852,374,229,299],
+    "action":"Click",
+    "next":["点击购买"]
+    },
+    "点击购买": {
+        "post_wait_freezes": 500,
+        "recognition":"TemplateMatch",
+        "template":"购买.png",
+        "action":"Click",
+        "next":["点击商店返回"]
+        },
+    "点击商店返回": {
+        "post_wait_freezes": 500,
+        "recognition":"TemplateMatch",
+        "template":"返回.png",
+        "threshold":0.9,
+        "action":"Click",
+        "next":["点击邮件"]
+    },
+    "点击邮件": {
+        "post_wait_freezes": 500,
+        "recognition":"TemplateMatch",
+        "template":"邮件.png",
+        "roi":[121,403,66,70],
+        "action":"Click",
+        "next":["点击领取全部"]
+    },
+    "点击领取全部": {
+        "post_wait_freezes": 500,
+        "recognition":"TemplateMatch",
+        "template":"领取全部.png",
+        "roi":[214,621,209,55],
+        "action":"Click",
+        "next":["点击邮件返回"]
+    },
+    "点击邮件返回": {
+        "post_wait_freezes": 500,
+        "recognition":"TemplateMatch",
+        "template":"返回.png",
+        "roi":[28,12,107,447],
+        "action":"Click",
+        "next":["点击采购"]
+    },
+    "点击采购": {
+        "post_wait_freezes": 500,
+        "recognition":"TemplateMatch",
+        "template":"采购.png",
+        "roi":[979,302,74,64],
+        "action":"Click",
+        "next":["点击补给包"]
+    },
+    "点击补给包": {
+        "post_wait_freezes": 500,
+        "recognition":"TemplateMatch",
+        "template":"补给包.png",
+        "roi":[485,90,125,33],
+        "action":"Click",
+        "next":["点击日常补给"]
+    },
+    "点击日常补给": {
+        "post_wait_freezes": 500,
+        "recognition":"TemplateMatch",
+        "template":"日常补给.png",
+        "roi":[24,252,124,40],
+        "action":"Click",
+        "next":["点击每周补给"]
+    },
+    "点击每周补给": {
+        "post_wait_freezes": 500,
+        "recognition":"OCR",
+        "expected":"每周限购补给包",
+        "action":"Click",
+        "next":["点击购买每周补给"]
+    },
+    "点击购买每周补给": {
+        "post_wait_freezes": 2000,
+        "recognition":"OCR",
+        "expected":"免费购买",
+        "roi":[528,636,224,49],
+        "action":"Click",
+        "next":["点击每日补给"]
+    },
+    "点击每日补给": {
+        "post_wait_freezes": 500,
+        "recognition":"OCR",
+        "expected":"每日血清补给包",
+        "action":"Click",
+        "next":["点击购买每日补给"]
+    },
+    "点击购买每日补给": {
+        "post_wait_freezes": 2000,
+        "recognition":"OCR",
+        "expected":"免费购买",
+        "roi":[528,636,224,49],
+        "action":"Click",
+        "next":["点击采购返回"]
+    },
+    "点击采购返回": {
+        "post_wait_freezes": 500,
+        "recognition":"TemplateMatch",
+        "template":"采购返回.png",
+        "roi":[30,14,131,57],
+        "action":"Click"
+    }
+}
