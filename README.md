@@ -19,7 +19,7 @@
 
 ## 使用说明
 
-下载地址：
+下载地址：https://github.com/xuxu20040407/MaaGrayRaven/releases/tag/GrayRaven
 
 
 ## 开发相关
