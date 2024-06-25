@@ -21,6 +21,7 @@
 
 下载地址：https://github.com/xuxu20040407/MaaGrayRaven/releases/tag/GrayRaven
 
+解压后打开exe文件，以mumu模拟器为例，依次选择“安卓端”，官服（照抄的，应该没什么区别），开始任务，随后在7个选项中选择6.run task（其实我没有全部搞懂）。
 
 ## 开发相关
 
